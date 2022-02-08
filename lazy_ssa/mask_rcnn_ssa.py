@@ -1,4 +1,3 @@
-
 #%%
 # Pulled from
 # https://github.com/pytorch/benchmark/blob/main/torchbenchmark/models/vision_maskrcnn/__init__.py
@@ -27,13 +26,10 @@ eval_model([input])
 # The fastest way to figure out how much faster things can be with JIT is to just measure the input vectors
 
 
-
 start_time = time.perf_counter()
 torch._C._jit_pass_propagate_shapes_on_graph(graph)
 end_time = time.perf_counter()
 print("Propagate shapes on graph: {}".format(end_time - start_time))
-
-
 
 
 #%%
@@ -49,6 +45,7 @@ pprint(x)
 
 #%%
 
+
 def get_shape_info_for_in(input):
     ivalue = input.toIValue()
     if isinstance(ivalue, torch.Tensor):
@@ -56,6 +53,7 @@ def get_shape_info_for_in(input):
     if isinstance(ivalue, list):
         return tuple(ivalue)
     return ivalue
+
 
 conv_node_shapes = defaultdict(int)
 for node in all_nodes:
