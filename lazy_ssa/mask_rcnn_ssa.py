@@ -12,17 +12,30 @@ import time
 
 
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+input = torch.randn(3, 224, 224, device=device)
+
+"""
+# MaskRCNN
 model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=True).to(device)
 eval_model = model
 model = torch.jit.script(model)
 eval_model = torch.jit.script(model)
 eval_model.eval()
 eval_model = torch.jit.freeze(eval_model)
+rcnn_input = [input]
+eval_model(rcnn_input)
+"""
 
-input = torch.randn(3, 224, 224, device=device)
+# Resnet 50
+model = torchvision.models.resnet50(pretrained=True)
+eval_model = model
+model = torch.jit.script(model)
+eval_model = torch.jit.script(model)
+eval_model.eval()
+eval_model = torch.jit.freeze(eval_model)
+
 graph = eval_model.graph
-
-eval_model([input])
+# eval_model(input)
 # The fastest way to figure out how much faster things can be with JIT is to just measure the input vectors
 
 
