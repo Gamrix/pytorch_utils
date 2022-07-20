@@ -1,0 +1,73 @@
+[jclow@devvm7215.ftw0 ~/fbsource/fbcode] ./buck-out/gen/caffe2/caffe2/fb/high_perf_models/pytorch/benchmark_framework_overheads/cpp_benchmark --useOutOfPlace --kinetoInputShapes
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0630 17:39:56.980247 3004926 bench.cpp:290] Starting op benchmarking 50 iterations
+I0630 17:39:56.980343 3004926 bench.cpp:379] Creating inputs, number of dimensions 1
+Log file: /tmp/libkineto_activities_3004926.json
+INFO:2022-06-30 17:39:56 3004926:3004926 Config.cpp:473] Trace start time: 2022-06-30 17:40:11
+Trace duration: 500ms
+Warmup duration: 5s
+Max GPU buffer size: 128MB
+Enabled activities: cpu_op,user_annotation,external_correlation,cuda_runtime,cpu_instant_event,python_function
+Manifold bucket: gpu_traces
+Manifold object: tree/traces/clientAPI/0/1656635996/devvm7215.ftw0/libkineto_activities_3004926.json
+Trace compression enabled: 1
+INFO:2022-06-30 17:39:56 3004926:3004926 CuptiActivityProfiler.cpp:647] Tracing starting in 14s
+INFO:2022-06-30 17:39:56 3004926:3004926 CuptiActivityProfiler.cpp:650] Tracing will end in 15s
+I0630 17:39:57.053402 3004926 Logger.cpp:2060] Logging to non-prod scuba table named 'unified_system_traces/sandbox' in Tulipv2 format
+STAGE:2022-06-30 17:39:56 3004926:3004926 ActivityProfilerController.cpp:297] Completed Stage: Warm Up
+I0630 17:39:57.059530 3004926 bench.cpp:433] Using a = a + b
+I0630 17:39:57.539661 3004926 bench.cpp:237] PyTorchObserver {"value":1.2072596249999998,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:39:57.780264 3004926 bench.cpp:237] PyTorchObserver {"value":1.20266833,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:39:58.017877 3004926 bench.cpp:237] PyTorchObserver {"value":1.1877423200000001,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:39:58.248494 3004926 bench.cpp:237] PyTorchObserver {"value":1.15274133,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:39:58.482559 3004926 bench.cpp:237] PyTorchObserver {"value":1.169962685,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:39:58.722227 3004926 bench.cpp:237] PyTorchObserver {"value":1.198001665,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:39:58.977707 3004926 bench.cpp:237] PyTorchObserver {"value":1.27704981,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:39:59.245103 3004926 bench.cpp:237] PyTorchObserver {"value":1.336511235,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:39:59.520629 3004926 bench.cpp:237] PyTorchObserver {"value":1.3772529749999998,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:39:59.758061 3004926 bench.cpp:237] PyTorchObserver {"value":1.18681061,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:39:59.995530 3004926 bench.cpp:237] PyTorchObserver {"value":1.18685139,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:00.239900 3004926 bench.cpp:237] PyTorchObserver {"value":1.22151732,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:00.480034 3004926 bench.cpp:237] PyTorchObserver {"value":1.2002914999999998,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:00.752871 3004926 bench.cpp:237] PyTorchObserver {"value":1.3637949050000002,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:01.032260 3004926 bench.cpp:237] PyTorchObserver {"value":1.396560755,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:01.295284 3004926 bench.cpp:237] PyTorchObserver {"value":1.3147903950000002,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:01.564608 3004926 bench.cpp:237] PyTorchObserver {"value":1.34626299,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:01.823531 3004926 bench.cpp:237] PyTorchObserver {"value":1.29428859,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:02.072270 3004926 bench.cpp:237] PyTorchObserver {"value":1.24335652,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:02.327245 3004926 bench.cpp:237] PyTorchObserver {"value":1.274451265,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:02.563553 3004926 bench.cpp:237] PyTorchObserver {"value":1.18120213,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:02.800681 3004926 bench.cpp:237] PyTorchObserver {"value":1.185309275,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:03.043246 3004926 bench.cpp:237] PyTorchObserver {"value":1.21247661,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:03.294157 3004926 bench.cpp:237] PyTorchObserver {"value":1.254188085,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:03.535995 3004926 bench.cpp:237] PyTorchObserver {"value":1.208876865,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:03.783977 3004926 bench.cpp:237] PyTorchObserver {"value":1.23955424,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:04.054442 3004926 bench.cpp:237] PyTorchObserver {"value":1.35192661,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:04.298630 3004926 bench.cpp:237] PyTorchObserver {"value":1.22052464,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:04.547607 3004926 bench.cpp:237] PyTorchObserver {"value":1.244532175,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:04.792531 3004926 bench.cpp:237] PyTorchObserver {"value":1.224271855,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:05.044509 3004926 bench.cpp:237] PyTorchObserver {"value":1.259514545,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:05.302259 3004926 bench.cpp:237] PyTorchObserver {"value":1.28839971,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:05.561940 3004926 bench.cpp:237] PyTorchObserver {"value":1.298040045,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:05.820093 3004926 bench.cpp:237] PyTorchObserver {"value":1.2903550350000002,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:06.075389 3004926 bench.cpp:237] PyTorchObserver {"value":1.276141315,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:06.310550 3004926 bench.cpp:237] PyTorchObserver {"value":1.1754441,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:06.541970 3004926 bench.cpp:237] PyTorchObserver {"value":1.156760305,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:06.773775 3004926 bench.cpp:237] PyTorchObserver {"value":1.158668005,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:07.013612 3004926 bench.cpp:237] PyTorchObserver {"value":1.1988493249999999,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:07.250322 3004926 bench.cpp:237] PyTorchObserver {"value":1.1831371499999999,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:07.489856 3004926 bench.cpp:237] PyTorchObserver {"value":1.19732831,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:07.867552 3004926 bench.cpp:237] PyTorchObserver {"value":1.88809688,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:08.116171 3004926 bench.cpp:237] PyTorchObserver {"value":1.24273766,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:08.376662 3004926 bench.cpp:237] PyTorchObserver {"value":1.302045235,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:08.629520 3004926 bench.cpp:237] PyTorchObserver {"value":1.26389027,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:08.880209 3004926 bench.cpp:237] PyTorchObserver {"value":1.253103005,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:09.127701 3004926 bench.cpp:237] PyTorchObserver {"value":1.23707946,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:09.381109 3004926 bench.cpp:237] PyTorchObserver {"value":1.266628745,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:09.639053 3004926 bench.cpp:237] PyTorchObserver {"value":1.28938726,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:09.871744 3004926 bench.cpp:237] PyTorchObserver {"value":1.163029955,"unit":"us","metric":"latency","type":"OutOfPlace_ndim_1"}
+I0630 17:40:09.871793 3004926 bench.cpp:244] Mean 1.25699
+I0630 17:40:09.871843 3004926 bench.cpp:245] Median 1.24274
+I0630 17:40:09.871850 3004926 bench.cpp:246] Min 1.15274
+I0630 17:40:09.871852 3004926 bench.cpp:247] stddev 0.108872
+I0630 17:40:09.871862 3004926 bench.cpp:248] stddev / mean 0.0866133
