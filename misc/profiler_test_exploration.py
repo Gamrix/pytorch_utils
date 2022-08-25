@@ -22,6 +22,7 @@ with profile(with_stack=True, profile_memory=True) as p:
 
 print(_.shape)
 
+
 def find_add(nodes):
     for n in nodes:
         if n.name() == "aten::add":
@@ -32,8 +33,7 @@ def find_add(nodes):
 
 
 node = find_add(p.profiler.kineto_results.experimental_event_tree())
-assert(node is not None)
-
+assert node is not None
 
 
 """
@@ -61,4 +61,24 @@ print(node.extra_fields.inputs.scalars)
 print(node.extra_fields.inputs.shapes)
 print(node.extra_fields.inputs.dtypes_)
 
+# %%
+
+# Play with Sparse Tensors
+import torch
+
+i = [[0, 1, 1], [2, 0, 2]]
+v = [3, 4, 5]
+s = torch.sparse_coo_tensor(i, v, (2, 3))
+s.stride()
+
+# %%
+
+input = torch.randn(1, 5, 10)
+input = input.to_mkldnn()
+print(input.layout, torch._mkldnn)
+print(repr(input.layout))
+try:
+    input.stride()
+except Exception as e:
+    print(e)
 # %%
